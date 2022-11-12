@@ -29,7 +29,11 @@ export default function randomCat() {
     }, [])
 
     function Loader() {
-        return !cat ? <CircularProgress/> : null;
+        return !cat ?
+            <div className="flex flex-col justify-center items-center">
+                <CircularProgress/>
+            </div> :
+            null;
     }
 
     // @ts-ignore
