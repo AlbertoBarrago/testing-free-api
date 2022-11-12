@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import Link from "next/link";
 
-const pages = ['About'];
+const pages = ['random-cat'];
 const settings = ['Profile', 'Logout'];
 
 function ResponsiveAppBar() {
