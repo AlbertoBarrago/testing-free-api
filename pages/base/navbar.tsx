@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
 import Link from "next/link";
 
-const pages = ['random-cat'];
+const pages = ['random-cat', 'random-dog'];
 const settings = ['work-in-progress'];
 
 function ResponsiveAppBar() {
