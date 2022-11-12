@@ -4,8 +4,15 @@ import {useEffect, useState} from "react";
 import PetsIcon from '@mui/icons-material/Pets';
 import {CircularProgress} from "@mui/material";
 
+interface CatResponse {
+    "id": string,
+    "url": string,
+    "width": number,
+    "height": number
+}
+
 export default function randomCat() {
-    const [cat, setCat] = useState();
+    const [cat, setCat] = useState<CatResponse>();
     const callAPI = async () => {
         setCat(undefined);
         try {
