@@ -1,7 +1,5 @@
-import Button from "@mui/material/Button";
 import Image from "next/image";
 import {useEffect, useState} from "react";
-import PetsIcon from '@mui/icons-material/Pets';
 import {CircularProgress} from "@mui/material";
 
 interface CatResponse {
@@ -51,7 +49,6 @@ export default function randomCat() {
     }
 
     return <div>
-        {/*<Button onClick={callAPI}> <PetsIcon/> <p className='ml-2 mr-2'>Get Random Cat</p></Button><br/>*/}
         <Loader/>
         <AppendCatAfterCall/>
     </div>
