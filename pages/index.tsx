@@ -1,5 +1,8 @@
 export default function Home() {
-  return (
-   <h1 className="text-center mt-[20%]">Hello! I'm the home</h1>
-  )
+    return (
+        <div className="grid grid-cols-1 gap-1 text-center">
+            <h1 className="text-center mt-10 text-5xl">Hello!</h1>
+            <p className='mt-3'>Work in progress...</p>
+        </div>
+    )
 }

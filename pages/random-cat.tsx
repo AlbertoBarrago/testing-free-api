@@ -1,17 +1,12 @@
 import Image from "next/image";
 import {useEffect, useState} from "react";
 import {CircularProgress} from "@mui/material";
+import CatResponse from "../interfaces/CatResponse";
 
-interface CatResponse {
-    "id": string,
-    "url": string,
-    "width": number,
-    "height": number
-}
 
 export default function randomCat() {
     const [cat, setCat] = useState<CatResponse>();
-    const callAPI = async () => {
+    const getRandomCat = async () => {
         setCat(undefined);
         try {
             const res = await fetch(
@@ -25,7 +20,7 @@ export default function randomCat() {
     };
 
     useEffect(() => {
-        callAPI().then(null);
+        getRandomCat().then(null);
     }, [])
 
     function Loader() {
@@ -39,12 +34,11 @@ export default function randomCat() {
     // @ts-ignore
     function AppendCatAfterCall() {
         return cat ?
-            <div className="flex flex-col justify-center items-center">
+            <div className="mt-10 w-96 max-w-96 h-96 max-h-96">
                 <Image src={cat.url}
                        height={600}
                        width={600}
-                       onClick={callAPI}
-                       className='object-contain'
+                       onClick={getRandomCat}
                        title='Click on me for update'
                        alt={cat.id}>
                 </Image>
@@ -53,7 +47,11 @@ export default function randomCat() {
     }
 
     return <div>
-        <Loader/>
-        <AppendCatAfterCall/>
+        <div className='grid grid-cols-1 gap-1 place-items-center'>
+            <Loader/>
+            <div>
+                <AppendCatAfterCall/>
+            </div>
+        </div>
     </div>
 }
