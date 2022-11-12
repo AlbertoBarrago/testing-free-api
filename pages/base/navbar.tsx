@@ -3,6 +3,8 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Fade from '@mui/material/Fade';
+import Link from "next/link";
+import AccessibleIcon from '@mui/icons-material/Accessible';
 
 export default function FadeMenu() {
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -35,9 +37,7 @@ export default function FadeMenu() {
                 onClose={handleClose}
                 TransitionComponent={Fade}
             >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
-                <MenuItem onClick={handleClose}>Logout</MenuItem>
+                <Link href="about"><MenuItem onClick={handleClose}><AccessibleIcon/>  About</MenuItem></Link>
             </Menu>
         </header>
     );
