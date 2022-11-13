@@ -5,7 +5,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'cat-pattern': "url('/images/blackcat.jpg')",
+      }
+    },
   },
   plugins: [],
 }
