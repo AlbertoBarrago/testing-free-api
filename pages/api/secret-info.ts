@@ -5,6 +5,7 @@ type Data = {
     id: string,
     name: string,
     surname: string,
+    nasaApiKey: string
 }
 
 function generateRandomId() {
@@ -19,7 +20,8 @@ export default function handler(
         {
             id: generateRandomId(),
             name: 'Alberto',
-            surname: 'Barrago'
+            surname: 'Barrago',
+            nasaApiKey: 'gefavWIrU7iD8o6zLgvojChcvE5UHrPtgxhUd7aF' //private
         }
     )
 }

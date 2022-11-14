@@ -1,7 +1,4 @@
-import Image from "next/image";
 import {useEffect, useState} from "react";
-import {CircularProgress} from "@mui/material";
-// @ts-ignore
 import {UserResponse} from '../interfaces/UserResponse';
 
 

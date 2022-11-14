@@ -35,7 +35,7 @@ export default function randomMeowfacts() {
     function AppendCatAfterCall() {
         return meowFact ?
             <div className="mt-2 text-center">
-              <h1 className='text-5xl hover:cursor-pointer p-10' onClick={getMeowFacts}>{meowFact}</h1>
+              <h1 className='text-3xl hover:cursor-pointer p-10' onClick={getMeowFacts}>{meowFact}</h1>
             </div>
             : null;
     }
