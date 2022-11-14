@@ -5,7 +5,6 @@ import Image from "next/image";
 
 export default function picOfTheDay() {
     const [nasaPicOfTheDay, setNasaPicOfTheDay] = useState<any>();
-
     const getUserProfile = async () => {
         try {
             const res = await fetch(
@@ -17,7 +16,6 @@ export default function picOfTheDay() {
             console.log(err);
         }
     };
-
     const getNasaImage = async (data:any) => {
         try {
             const res = await fetch(
@@ -31,7 +29,7 @@ export default function picOfTheDay() {
     };
 
     useEffect(() => {
-        getUserProfile().then(() => {})
+        getUserProfile().then()
     }, [])
 
     function Loader() {
