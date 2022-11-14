@@ -54,21 +54,21 @@ export default function picOfTheDay() {
 
     function ZenQuotes() {
         return nasaPicOfTheDay ?
-                 <div className="mt-2 grid justify-items-center">
-                     <Image src={nasaPicOfTheDay.hdurl}
-                            height={500}
-                            width={500}
-                            className='object-center'
-                            title=''
-                            alt={nasaPicOfTheDay.copyright}>
-                     </Image>
-                    <h1 className='text-1xl hover:cursor-pointer p-5 w-[45rem]'>{nasaPicOfTheDay.explanation}</h1>
+                 <div className="mt-2 flex flex-col justify-center items-center max-h-128">
+                         <Image src={nasaPicOfTheDay.hdurl}
+                                height={350}
+                                width={350}
+                                title=''
+                                className='object-cover h-96 w-96'
+                                alt={nasaPicOfTheDay.copyright}>
+                         </Image>
+                    <h1 className='text-1xl hover:cursor-pointer p-5 object-cover w-8/12'>{nasaPicOfTheDay.explanation}</h1>
                 </div>
             : null;
     }
 
     return <div>
-        <div className='grid grid-cols-1 gap-1'>
+        <div className='grid grid-cols-1 gap-1 justify-items-center overflow-auto max-h-[42rem] mt-4'>
             <Loader/>
             <div>
                 <ZenQuotes/>
