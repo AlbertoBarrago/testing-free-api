@@ -5,24 +5,23 @@ import Image from "next/image";
 
 export default function picOfTheDay() {
     const [nasaPicOfTheDay, setNasaPicOfTheDay] = useState<any>();
-    const [user, setUser] = useState<any>();
 
     const getUserProfile = async () => {
         try {
             const res = await fetch(
                 `/api/secret-info`
             );
-            const user = await res.json();
-            setUser(user);
+            const userFetched = await res.json();
+            getNasaImage(userFetched).then();
         } catch (err) {
             console.log(err);
         }
     };
 
-    const getNasaImage = async () => {
+    const getNasaImage = async (data:any) => {
         try {
             const res = await fetch(
-                `https://api.nasa.gov/planetary/apod?api_key=gefavWIrU7iD8o6zLgvojChcvE5UHrPtgxhUd7aF`
+                `https://api.nasa.gov/planetary/apod?api_key=${data.nasaApiKey}`
             );
             const resp = await res.json();
             setNasaPicOfTheDay(resp);
@@ -32,16 +31,7 @@ export default function picOfTheDay() {
     };
 
     useEffect(() => {
-        // getUserProfile().then(() => {
-        //     () => {
-        //         console.log("User Fetched")
-        //     }
-        // })
-        getNasaImage().then(
-            () => {
-                console.log("Data fetched")
-            }
-        );
+        getUserProfile().then(() => {})
     }, [])
 
     function Loader() {
