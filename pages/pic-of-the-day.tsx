@@ -42,15 +42,15 @@ export default function picOfTheDay() {
 
     function ZenQuotes() {
         return nasaPicOfTheDay ?
-                 <div className="mt-2 flex flex-col justify-center items-center max-h-128">
+                 <div className="mt-2 flex flex-col justify-center items-center">
                          <Image src={nasaPicOfTheDay.hdurl}
                                 height={350}
                                 width={350}
                                 title=''
-                                className='object-cover h-96 w-96'
+                                className='sm:h-96 sm:w-96 w-64 h-64'
                                 alt={nasaPicOfTheDay.copyright}>
                          </Image>
-                    <h1 className='text-1xl hover:cursor-pointer p-5 object-cover w-8/12'>{nasaPicOfTheDay.explanation}</h1>
+                    <h1 className='text-1xl p-5 xs:p-0 sm:w-10/12 h-96'>{nasaPicOfTheDay.explanation}</h1>
                 </div>
             : null;
     }
