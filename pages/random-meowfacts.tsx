@@ -1,6 +1,5 @@
 import {useEffect, useState} from "react";
 import {CircularProgress} from "@mui/material";
-import Image from "next/image";
 
 
 export default function randomMeowfacts() {
