@@ -12,11 +12,11 @@ export default function Home() {
                 </Image>
             </div>
             <div>
-                <Typography variant="h1" className="mt-52 text-3xl">
+                <h1  className="mt-52 text-3xl">
                     Ciao stiamo sperimentando giusto due
                     cosette... <br/> Volete contribuire? <br/>
                     Non potete 😂 <br/> <br/> Scherzo!
-                    per ulteriori info  <br/> scrivetemi una  <a href="mailto:alberto.barrago@gmail.com&subject?subject=Richiesta info!&body=Ciao Alberto, ">email</a> </Typography>
+                    per ulteriori info  <br/> scrivetemi una  <a href="mailto:alberto.barrago@gmail.com&subject?subject=Richiesta info!&body=Ciao Alberto, ">email</a> </h1>
             </div>
         </div>
     )
