@@ -8,8 +8,6 @@ export default function randomCat({data}: {data: CatResponse}) {
     // @ts-ignore
     const [cat, setCat] = useState<CatElement>(data[0]);
     const getRandomCat = async () => {
-        // @ts-ignore
-        setCat([])
         try {
             const res = await fetch(
                 `https://api.thecatapi.com/v1/images/search`
