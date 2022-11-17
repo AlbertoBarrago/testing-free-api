@@ -1,22 +1,10 @@
 import {NextApiRequest, NextApiResponse} from "next";
 
-
-
-export default function handler(
+export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<any>
 ) {
-    let data;
-    const getRandomCat = async () => {
-
-        try {
-            const res = await fetch(
-                `https://api.thecatapi.com/v1/images/search`
-            );
-            return data = await res.json();
-        } catch (err) {
-            console.log(err);
-        }
-    };
+    const resp = await fetch(`https://api.thecatapi.com/v1/images/search`)
+    const data = await resp.json()
     res.status(200).json(data)
 }

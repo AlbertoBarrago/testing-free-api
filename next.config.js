@@ -5,6 +5,9 @@ const nextConfig = {
   images: {
     domains: ['cdn2.thecatapi.com','cdn2.thedogapi.com','apod.nasa.gov']
   },
+  env: {
+    BASE_URL: process.env.BASE_URL
+  }
 }
 
 module.exports = nextConfig
