@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Home() {
     return (
-        <div className="grid grid-cols-2 gap-1 text-center">
+        <div className="grid sm:grid-cols-2 grid-cols-1 gap-1 text-center">
             <div className="mt-[10%] flex flex-col items-center">
                 <Image src='/images/troll-pilled.gif'
                        height={600}
@@ -12,7 +12,7 @@ export default function Home() {
                 </Image>
             </div>
             <div>
-                <h1  className="mt-52 text-3xl">
+                <h1  className="mt-52 text-3xl hidden sm:block">
                     Ciao stiamo sperimentando giusto due
                     cosette... <br/> Volete contribuire? <br/>
                     Non potete 😂 <br/> <br/> Scherzo!
