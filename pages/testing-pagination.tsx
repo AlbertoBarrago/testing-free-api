@@ -43,23 +43,21 @@ export default function TablePaginationDemo() {
 
     return (
 
-        <><Grid container
-                padding={5}
-                direction="row"
-                className='bg-white'
-                justifyContent="center"
-                alignItems="center">
-            <Grid item  maxHeight={500} height={500} xs={12} className='overflow-scroll'>
-                {element.map((e, index) => {
-                return <Element key={index} element={e}/>;
-             })}
-            </Grid>
-            <Grid item xs={12}>
-                <Stack alignItems="center" component='div'>
-                    <Pagination className='mt-3' count={element.length} onChange={handleChangePage}/>
-                </Stack>
-            </Grid>
-        </Grid>
+        <>
+            <div className="w-screen mx-auto bg-white h-[85vh]">
+                <div className="flex flex-col p-10">
+                    <div className='mb-10'>
+                        {element.map((e, index) => {
+                            return <Element key={index} element={e}/>
+                        })}
+                    </div>
+                    <div>
+                        <Stack alignItems="center" component='div'>
+                            <Pagination count={element.length} onChange={handleChangePage}/>
+                        </Stack>
+                    </div>
+                </div>
+            </div>
         </>
     );
 }
