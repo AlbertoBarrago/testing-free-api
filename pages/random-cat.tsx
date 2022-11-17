@@ -1,13 +1,12 @@
 import Image from "next/image";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import {CircularProgress} from "@mui/material";
 import {CatResponse} from '../interfaces/CatResponse';
 
 
-export default function randomCat() {
-    const [cat, setCat] = useState<CatResponse>();
+export default function randomCat({data}: any) {
+    const [cat, setCat] = useState<CatResponse>(data[0]);
     const getRandomCat = async () => {
-        setCat(undefined);
         try {
             const res = await fetch(
                 `https://api.thecatapi.com/v1/images/search`
@@ -18,10 +17,6 @@ export default function randomCat() {
             console.log(err);
         }
     };
-
-    useEffect(() => {
-        getRandomCat().then(null);
-    }, [])
 
     function Loader() {
         return !cat ?
@@ -54,4 +49,12 @@ export default function randomCat() {
             </div>
         </div>
     </div>
+}
+
+export async function getServerSideProps() {
+    const res = await fetch(`https://api.thecatapi.com/v1/images/search`)
+    const data = await res.json()
+    return {
+        props: {data}, // will be passed to the page component as props
+    }
 }
