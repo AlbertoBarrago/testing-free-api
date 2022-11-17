@@ -21,7 +21,7 @@ export default function randomCat({data}: {data: CatResponse}) {
 
 
     function AppendCatAfterCall() {
-        return <div className="mt-10 w-96 max-w-96 h-96 max-h-96">
+        return <div className="mt-10 w-96 sm:w-[100%] max-w-96 h-96 max-h-96">
             <Image src={cat.url}
                    height={600}
                    width={600}
