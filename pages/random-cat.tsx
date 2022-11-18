@@ -1,6 +1,5 @@
 import Image from 'next/legacy/image'
 import {useState} from "react";
-import {CircularProgress} from "@mui/material";
 import {CatElement, CatResponse} from '../interfaces/CatElement';
 
 

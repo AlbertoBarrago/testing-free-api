@@ -1,4 +1,3 @@
-import Typography from "@mui/material/Typography";
 import Image from "next/image";
 
 export default function Home() {
@@ -13,7 +12,7 @@ export default function Home() {
             </div>
             <div>
                 <h1  className="mt-52 text-3xl hidden sm:block">
-                    Ciao stiamo sperimentando giusto due
+                    Ciao, stiamo sperimentando giusto due
                     cosette... <br/> Volete contribuire? <br/>
                     Non potete 😂 <br/> <br/> Scherzo!
                     per ulteriori info  <br/> scrivetemi una  <a href="mailto:alberto.barrago@gmail.com&subject?subject=Richiesta info!&body=Ciao Alberto, ">email</a> </h1>
